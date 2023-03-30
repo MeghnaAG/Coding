@@ -1,32 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int isprime(int n)
-{
-    int i,flag=1;
-    for(i=2;i<=n/2;i++)
-    {
-        if(n%i==0)
-        {
-            flag=0;
-            break;
-        }
-    }
-    return flag;
-}
 int main()
 {
-    int a[10],i,sum=0,r;
-    printf("Enter a 10 digit array:");
-    for(i=0;i<10;i++)
-    {
-        scanf("%d",&a[i]);
-        sum+=a[i];
+    int n=10;
+    int *p=malloc(n);
+    if(p==NULL){
+        printf("Unable to allocate memory");
+        return -1;
     }
-    r=isprime(sum);
-    if(r==1)
-        printf("Sum is prime");
-    else
-        printf("Sum is not prime");
+    printf("Allocated %d bytes of memory\n",n);
+    printf("%p\t%p\t%p",p,p+1,p+2);
+    free(p);
     return 0;
 }
