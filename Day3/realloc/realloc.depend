@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1680064964 source:e:\placement coding\realloc\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
